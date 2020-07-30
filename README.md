@@ -14,15 +14,15 @@ Login to Docker Hub
     
 Pull the image. By the default, the image uses node 12.18.3.
 
-    docker pull gmolaire/docker-yarn
+    docker pull gmolaire/yarn
 
 To run a command against your project assuming your running the container in its directory:
 
-    docker run -it --rm -w "/usr/app" -v "$PWD":/usr/app gmolaire/docker-yarn yarn <COMMAND>
+    docker run -it --rm -w "/usr/app" -v "$PWD":/usr/app gmolaire/yarn yarn <COMMAND>
 
 ## Limitation
 
-- This will not work for openjdk Windows specific images
+- This will not work for Windows specific images
 - The main user is root
 
 ## Building
