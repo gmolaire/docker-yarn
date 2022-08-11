@@ -13,7 +13,6 @@ if command -v apt-get &> /dev/null ; then \
     apt-get update && \
     apt-get install -y yarn=${YARN_VERSION}-1; \
 elif command -v apk &> /dev/null ; then \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && \
     apk add yarn=~${YARN_VERSION}; \
 else \
