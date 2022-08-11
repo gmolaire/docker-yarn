@@ -1,7 +1,7 @@
-ARG NODE_VERSION=14.6.0
+ARG NODE_VERSION=16.16.0
 FROM node:${NODE_VERSION}
 
-ARG YARN_VERSION=1.22.4
+ARG YARN_VERSION=1.22.19
 
 RUN \
 if command -v apt-get &> /dev/null ; then \
@@ -13,7 +13,6 @@ if command -v apt-get &> /dev/null ; then \
     apt-get update && \
     apt-get install -y yarn=${YARN_VERSION}-1; \
 elif command -v apk &> /dev/null ; then \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && \
     apk add yarn=~${YARN_VERSION}; \
 else \
