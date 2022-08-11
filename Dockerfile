@@ -1,7 +1,7 @@
 ARG NODE_VERSION=14.6.0-alpine3.12
 FROM node:${NODE_VERSION}
 
-ARG YARN_VERSION=1.22.4
+ARG YARN_VERSION=1.22.19
 
 RUN \
 if command -v apt-get &> /dev/null ; then \
